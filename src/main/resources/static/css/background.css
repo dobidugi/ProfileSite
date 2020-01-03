@@ -1,0 +1,10 @@
+body {
+    background-color : #1b1e1d;
+}
+
+html {
+    font-size : 4vw;
+    font-family: fantasy;
+    color : white;
+    overflow : scroll;
+}

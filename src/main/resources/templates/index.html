@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        dobidugi
+    </title>
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" media="screen and (min-width : 1024px)" href="css/Desktop_index.css">
+    <link rel="stylesheet" media="screen and (max-width : 1023px)" href="css/mobile_index.css">
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <div class="header-content">
+            <p class="nick">Yutae Lee</p>
+            <div class="information">
+                <div class="email"> 📧 this@kakao.com</div>
+                <div class="phone"> 📞 +82 10-7633-0584</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="body-content">
+            <p class="title">Introduce</p>
+            <div class="introduce-content">
+                <p>안녕하세요 백앤드 개발자를 희망하는 평범한대학생입니다.</p>
+                <p>저와 함께 서비스를 만들고싶은 분들은 언제든지 연락주세요.</p>
+            </div>
+            <br/>
+            <div class="Skills">
+                <div class="title">Skills</div>
+                <div>
+                    <p class="sub">Programming Language</p>
+                    <p class="sub-sub">Java,JavaScript,Python</p>
+                    <p class="sub">Framework</p>
+                    <p class="sub-sub">JavaSpring, JavaSpringBoot</p>
+                    <p class="sub">Backend Development</p>
+                    <p class="sub-sub">Linux, MySql, MongoDB</p>
+                </div>
+            </div>
+            <br/>
+            <div>
+                <div class="Portfolio">Project</div>
+                <div class="project-box">
+                    <p class="project-title"> drawMind </p>
+                    <p class="project-comment">넷마블 캐치마인드 게임을 자바로 이용해 모방해본 프로젝트입니다.</p>
+                    <a class="detail"> detail </a><a class="git"> github </a> <p class="completion"> 완성 </p>
+                </div>
+                <div class="project-box">
+                    <div class="project-title"> 캐치마인드</div>
+                    <div class="project-comment">넷마블 캐치마인드 게임을 자바로 이용해 모방해본 프로젝트입니다.</div>
+                </div>
+                <div class="project-box">
+                    <div class="project-title"> 캐치마인드</div>
+                    <div class="project-comment">넷마블 캐치마인드 게임을 자바로 이용해 모방해본 프로젝트입니다.</div>
+                </div>
+                <p th:text="${name}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
