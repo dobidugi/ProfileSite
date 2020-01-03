@@ -73,6 +73,7 @@
     margin-bottom : 1%;
     margin-top : 1%;
     margin-top : 0.5rem;
+    padding-bottom : 1%;
 }
 
 .project-title {
@@ -86,11 +87,12 @@
     font-size : 0.5rem;
     margin-top : 2%;
     margin-bottom : 0;
+    margin-left : 3%;
 }
 
 .project-comment::before {
     content : " - ";
-    margin-left : 2%;
+
 }
 
 .detail::before {
@@ -101,12 +103,40 @@
     font-size : 0.4rem;
     display : inline;
     margin-left : 3%;
+    margin-bottom : 3%;
+    text-decoration : none;
 }
+
+.detail:link{
+    color :white;
+}
+
+.detail:visited {
+    color : white;
+}
+
+.detail:hover{
+    color : aqua;
+}
+
 
 .git {
     font-size : 0.4rem;
     display : inline;
-    margin-left : 3%
+    margin-left : 3%;
+    text-decoration : none;
+}
+
+.git:link{
+    color :white;
+}
+
+.git:visited {
+    color : white;
+}
+
+.git:hover{
+    color : aqua;
 }
 
 .git::before {

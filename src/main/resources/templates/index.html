@@ -43,18 +43,10 @@
             <br/>
             <div>
                 <div class="Portfolio">Project</div>
-                <div class="project-box">
-                    <p class="project-title"> drawMind </p>
-                    <p class="project-comment">넷마블 캐치마인드 게임을 자바로 이용해 모방해본 프로젝트입니다.</p>
-                    <a class="detail"> detail </a><a class="git"> github </a> <p class="completion"> 완성 </p>
-                </div>
-                <div class="project-box">
-                    <div class="project-title"> 캐치마인드</div>
-                    <div class="project-comment">넷마블 캐치마인드 게임을 자바로 이용해 모방해본 프로젝트입니다.</div>
-                </div>
-                <div class="project-box">
-                    <div class="project-title"> 캐치마인드</div>
-                    <div class="project-comment">넷마블 캐치마인드 게임을 자바로 이용해 모방해본 프로젝트입니다.</div>
+                <div class="project-box" th:each="project : ${project}">
+                    <p class="project-title" th:text="${project.name}"></p>
+                    <p class="project-comment" th:text="${project.comment}"></p>
+                    <a class="detail" th:href="@{'/home/' + ${project.detail}}"> detail </a> <a th:href="@{${project.git}}" class="git"> github </a>
                 </div>
                 <p th:text="${name}"></p>
             </div>
