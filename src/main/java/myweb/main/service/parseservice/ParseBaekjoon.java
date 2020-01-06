@@ -1,4 +1,4 @@
-package myweb.main.service.parseservcie;
+package myweb.main.service.parseservice;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -6,15 +6,15 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 
-public class ParseCodeup implements ParseSite {
+public class ParseBaekjoon implements ParseSite {
 
     private ParseSiteDao parseSiteDao;
-    final String URL = "https://codeup.kr/userinfo.php?user=chocojoahhae2";
+    final String URL = "https://www.acmicpc.net/user/dobidugi";
     private Document doc = null;
     private String rank = null;
     private String solve = null;
 
-    ParseCodeup(ParseSiteDao parseSiteDao){
+    ParseBaekjoon(ParseSiteDao parseSiteDao){
         this.parseSiteDao = parseSiteDao;
     }
 
@@ -40,12 +40,11 @@ public class ParseCodeup implements ParseSite {
     }
 
     private void parseRank() {
-        Element element = doc.getElementsByClass("text-center").first();
+        Element element = doc.getElementById("statics").select("td").first();
         rank = element.text();
-        rank = rank.substring(0,rank.length()-1);
     }
 
     private void writeDb() {
-        parseSiteDao.updateData("Codeup",rank,solve);
+        parseSiteDao.updateData("Baekjoon", rank, solve);
     }
 }

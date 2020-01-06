@@ -1,4 +1,4 @@
-package myweb.main.service.parseservcie;
+package myweb.main.service.parseservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

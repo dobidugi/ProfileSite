@@ -1,4 +1,4 @@
-package myweb.main.service.parseservcie;
+package myweb.main.service.parseservice;
 
 
 import java.io.IOException;

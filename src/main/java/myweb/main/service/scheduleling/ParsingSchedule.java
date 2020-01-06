@@ -3,8 +3,7 @@ package myweb.main.service.scheduleling;
 
 
 
-import myweb.main.service.parseservcie.ParseController;
-import myweb.main.service.parseservcie.ParseSite;
+import myweb.main.service.parseservice.ParseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

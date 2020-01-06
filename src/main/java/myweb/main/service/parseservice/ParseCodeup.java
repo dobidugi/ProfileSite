@@ -1,22 +1,20 @@
-package myweb.main.service.parseservcie;
+package myweb.main.service.parseservice;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-public class ParseBaekjoon implements ParseSite {
+public class ParseCodeup implements ParseSite {
 
     private ParseSiteDao parseSiteDao;
-    final String URL = "https://www.acmicpc.net/user/dobidugi";
+    final String URL = "https://codeup.kr/userinfo.php?user=chocojoahhae2";
     private Document doc = null;
     private String rank = null;
     private String solve = null;
 
-    ParseBaekjoon(ParseSiteDao parseSiteDao){
+    ParseCodeup(ParseSiteDao parseSiteDao){
         this.parseSiteDao = parseSiteDao;
     }
 
@@ -42,11 +40,12 @@ public class ParseBaekjoon implements ParseSite {
     }
 
     private void parseRank() {
-        Element element = doc.getElementById("statics").select("td").first();
+        Element element = doc.getElementsByClass("text-center").first();
         rank = element.text();
+        rank = rank.substring(0,rank.length()-1);
     }
 
     private void writeDb() {
-        parseSiteDao.updateData("Baekjoon", rank, solve);
+        parseSiteDao.updateData("Codeup",rank,solve);
     }
 }
