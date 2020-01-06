@@ -1,4 +1,4 @@
-package myweb.main.service.projectService;
+package myweb.main.service.projectservice;
 
 public class Project {
 
