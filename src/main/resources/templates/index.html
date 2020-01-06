@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" media="screen and (min-width : 1024px)" href="css/Desktop_index.css">
     <link rel="stylesheet" media="screen and (max-width : 1023px)" href="css/mobile_index.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 <div class="content">
@@ -51,19 +50,30 @@
                 </div>
                 <p th:text="${name}"></p>
             </div>
-
-            <script>
-            // Make a request for a user with a given ID
-                let url = "https://www.acmicpc.net/";
-                let config = {
-                    headers : {
-                        "Access-Control-Allow-Origin" : "*",
-                    }
-                }
-                axios.get(url,config).then(function(res){
-                    console.log(res);
-                })
-            </script>
+            <div>
+                <div class="codingtest">CodingTest</div>
+                <div class="codingtestbox">
+                    <table id="codetest-table">
+                        <caption>last update <a th:text="${updateTime}"></a></caption>
+                        <thead>
+                        <tr>
+                            <td width="25%">site</td><td width="25%">nick</td><td width="25%">rank</td><td>solve</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="site : ${site}">
+                                <td><a th:text="${site.name}" th:href="@{${site.nameLink}}"></a></td>
+                                <td><a th:text="${site.nick}" th:href="@{${site.nickLink}}"></a></td>
+                                <td th:text="${site.rank}"></td>
+                                <td th:text="${site.solve}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                \s
+            </div>
         </div>
     </div>
 </div>

@@ -147,3 +147,43 @@
     font-size : 0.4rem;
     display : inline;
 }
+
+#codetest-table {
+    font-size : 0.7rem;
+    width : 100%;
+    text-align : center;
+    margin-top : 0.5rem;
+    border-spacing : 0px;
+}
+
+#codetest-table thead td {
+    border-top : 1px solid white;
+    border-bottom : 1px solid white;
+}
+
+
+#codetest-table tbody td a:visited {
+    color : white;
+}
+
+#codetest-table tbody td a:hover {
+    color : aqua;
+}
+
+#codetest-table tbody td a:link {
+    color : white;
+    text-decoration : none;
+}
+
+#codetest-table tbody td {
+    border-bottom : 1px solid white;
+}
+
+#codetest-table tbody {
+    font-size : 0.5rem;
+}
+
+#codetest-table caption {
+    font-size : 0.4rem;
+    text-align : right;
+}

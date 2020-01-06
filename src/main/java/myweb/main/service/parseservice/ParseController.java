@@ -30,9 +30,8 @@ public class ParseController {
         }
     }
 
-    public void getList() {
-
+    public List<SiteInfo> getSiteList() {
+        return parseSiteDao.getInfo();
     }
-
 }
 

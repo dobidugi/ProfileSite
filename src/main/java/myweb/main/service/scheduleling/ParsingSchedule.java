@@ -15,8 +15,9 @@ public class ParsingSchedule {
 
     @Autowired
     private ParseController parseController;
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 3600000 )
     public  void test() throws IOException {
         parseController.onStart();
     }
+
 }
