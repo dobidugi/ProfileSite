@@ -18,7 +18,6 @@ public class ParseSiteDao {
     public void updateData(String name, String rank, String solve){
         final String query = "update parsesite set `rank`=?, `solve`=?, time=now() where name=?;";
         jdbcTemplate.update(query,rank,solve,name);
-        System.out.println(name+" "+ rank + " " +    solve);
     }
 
     public List<SiteInfo> getInfo() {
