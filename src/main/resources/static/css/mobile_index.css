@@ -162,15 +162,15 @@
 }
 
 
-#codetest-table tbody td a:visited {
+#codetest-table tbody tr td a:visited {
     color : white;
 }
 
-#codetest-table tbody td a:hover {
+#codetest-table tbody tr td a:hover {
     color : aqua;
 }
 
-#codetest-table tbody td a:link {
+tbody tr td a:link {
     color : white;
     text-decoration : none;
 }
@@ -184,6 +184,11 @@
 }
 
 #codetest-table caption {
+    font-size : 0.4rem;
+    text-align : right;
+}
+
+caption {
     font-size : 0.4rem;
     text-align : right;
 }
